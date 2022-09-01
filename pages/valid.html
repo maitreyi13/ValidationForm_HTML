@@ -49,6 +49,19 @@
                         <span id="pn" class="dan man"></span>
                     </div>
 
+                    <div class="from-group">
+                        <label for="password">Password <small class="dan">:</small></label>
+                        <input on="index.pass();" size="15" placeholder="Password" type="text" name="password"
+                            id="password_" value="">
+                        <span id="ps" class="dan man"></span>
+                    </div>
+                    <div class="from-group">
+                        <label for="cpassword"> Confirm Password <small class="dan">:</small></label>
+                        <input oninput="index.cpass();" size="15" placeholder="Confirm Password" type="text"
+                            name="cpassword" id="cpassword_" value="">
+                        <span id="cs" class="dan man"></span>
+                    </div>
+                   
                     <button onclick="index.validateForm();" type="button" class="btn" name="submit"
                         id="submitForm">Register</button>
 
