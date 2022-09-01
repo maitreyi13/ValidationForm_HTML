@@ -185,5 +185,19 @@ function Index()
            }
        }
     }
+    
+   function emai()
+   {
+       if(email.val()==''){ 
+           es.text('Email is required');
+       } 
+       else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.val())==false){
+           es.text('Invalid Email');
+       }
+       else 
+       {
+           es.text('');
+       }
+   }
 
 }
