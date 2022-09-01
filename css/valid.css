@@ -1,0 +1,142 @@
+html, body {margin:0;padding:0;font-family: 'Comic Sans';font-size:14px;}
+.main{width:100%}
+.bar{width:100%;border:1px solid transparent;}
+.wrapper{width:80%;margin:0 auto;border-top:1px solid #bbbbbb;}
+.wrapper::after{content:'';clear:both;display: table;}
+.contact{width:30%;float:left;padding:5px 0px;}
+.address{width:42%;float:right;text-align:right;padding:5px 0px;}
+.logo{width:30%;float:left;}
+.logo a{text-decoration: none;color: #000;}
+.quote{width:30%;float:right;padding:20px 0;text-align:center;}
+.callus{width:30%;float:right;padding:20px 0;text-align:center;}
+.nav{width:60%;float:left;padding:15px 0;height:20px;}
+.search{width:30%;float:right;text-align:right;padding:15px 0;}
+.box{float:left;width:24.5%;float:right;position: relative;border-right:1px solid #ccc;}
+.box .wrapper-circle {width: 100px;height: 100px;background: #e1f598;color: #fff;font-size: 3rem;text-align:center;border-radius: 50%;position: absolute;bottom: 138px;left: 9%;}
+.box .wrapper-circle i {margin:26px auto 0 auto;}
+.box h4{font-size: 17px;}
+
+
+
+.bb{min-height:400px;max-height:auto;background-size: cover;background-position: 0 70%;}
+
+
+.form-wrap{
+    background-color: #ffffff;
+    padding: 15px 25px;
+    color: #333;
+}
+.form-wrap h1,
+.form-wrap p{
+text-align: center;
+}
+.form-wrap .from-group{
+    margin-top: 15px;
+}
+
+.form-wrap .from-group label{
+    display: block;
+    color:#666
+}
+.form-wrap .from-group input{
+    width: 96%;
+    padding: 10px;
+    border: #ddd 1px solid;
+    border-radius: 5px;
+}
+.form-wrap button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background:  #f1552e;
+    color:#fff;
+}
+
+.form-wrap button:hover{
+    background: #37a08e;
+}
+
+.form-wrap .bottom-text{
+    font-size: 13px;
+    margin-top: 20px; 
+}
+footer{
+    text-align: center;
+    margin-top: 10px;    
+}
+footer a{
+    color:  #f1552e;
+}
+#p{
+    font-weight: bold;
+    color: #f1552e;
+}
+#p1{
+    font-weight: bold;
+    color: #f1552e;
+}
+
+#pp{
+    font-weight: bold;
+    color: #f1552e;
+    margin-right: 5px;
+
+}
+
+.btn{
+    border:1px solid transparent;
+}
+
+#loginBtn1, #registerBtn1 {
+    cursor: pointer;
+}
+
+
+
+
+/* Modal code start*/
+
+/* The Modal (background) */
+.modal {
+    /* display: none; */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; 
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .dan{
+    color:red;
+    font-weight: bold;
+}
+
+/* Modal code end*/
