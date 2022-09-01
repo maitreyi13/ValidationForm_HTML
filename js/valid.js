@@ -28,8 +28,7 @@ window.onclick = function(event)
 
 var first_name = $("#firstname");
 var last_name = $("#lastname");
-var dob = $("#DOB");
-var mobile = $("#mobile");
+var mobile = $("#phone_");
 var email = $("#email_");
 var password = $("#password_");
 var cpassword = $("#cpassword_");
@@ -82,7 +81,7 @@ function Index()
        if(first_name.val()==''){ fs.text('First name is required');}
        if(last_name.val()==''){ ls.text('Last name is required');}
        if(dob.val()==''){ ds.text('Date Of Birth is required');}
-       if(mobile.val()==''){ ms.text('Mobile is required');}
+       if(phone.val()==''){ ms.text('Mobile is required');}
        if(email.val()==''){ es.text('Email is required');} 
        else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.val())==false){
            es.text('Invalid Email');
@@ -92,9 +91,7 @@ function Index()
 
        if(password.val()==''){ ps.text('Password is required');}
        if(cpassword.val()==''){ cs.text('Confirm Password is required');}
-       if(city.val()==''){ lo.text('City is required');}
-       if(address.val()==''){ as.text('Address is required');}
-       if(zipcode.val()==''){ zs.text('Zipcode is required');}
+ 
 
        if ($("input[type='checkbox'][name='hobbies']:checked").length==0){
            hs.text('Hobbies are required');
@@ -114,18 +111,15 @@ function Index()
      
        // if(h1.checked==false || h2.checked==false || h3.checked==false){ hs.text('Hobbies are required');}
    
-       if(first_name.val()!='' && last_name.val()!='' && dob.val()!='' && mobile.val()!='' && email.val()!='' && password.val()!='' && city.val()!='' && address.val()!='' && zipcode.val()!='' && mobile.val().length==10 && (password.val()==cpassword.val())){
+       if(first_name.val()!='' && last_name.val()!='' && dob.val()!='' && phone.val()!='' && email.val()!='' && password.val()!='' && city.val()!='' && address.val()!='' && zipcode.val()!='' && mobile.val().length==10 && (password.val()==cpassword.val())){
            
            $('#show_1').text(first_name.val());
            $('#show_2').text(last_name.val());
            $('#show_3').text((male.val()=='on')?'Male':'Female');
-           $('#show_4').text(dob.val());
-           $('#show_5').text(mobile.val());
-           $('#show_6').text(email.val());
-           $('#show_7').text(password.val());
-           $('#show_8').text(city.val());
-           $('#show_9').text(address.val());
-           $('#show_10').text(zipcode.val());
+           $('#show_4').text(phone.val());
+           $('#show_5').text(email.val());
+           $('#show_6').text(password.val());
+    
            var checkedValue='';
            var inputElements = $('input[name="hobbies"]');
            for(var i=0; inputElements[i]; ++i){
@@ -139,7 +133,7 @@ function Index()
            $('#firstname').val('');
            $('#lastname').val('');
            $('#DOB').val('');
-           $('#mobile').val('');
+           $('#phone_').val('');
            $('#email_').val('');
            $('#password_').val('');
            $('#cpassword_').val('');
@@ -201,17 +195,48 @@ function Index()
    }
    function mobi()
    {
-       if(mobile.val()==''){ 
+       if(phone.val()==''){ 
            ms.text('Mobile is required');
        } 
        else {
-           mobile.val(mobile.val().replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1'));
+           phone.val(phone.val().replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1'));
            ms.text('');
-           if(mobile.val().length<10){
-               ms.text('Invalid Mobile number');
+           if(phone.val().length<10){
+               pn.text('Invalid Mobile number');
            }
        }
    }
+   function pass()
+   {
 
+       if(password.val()==''){
+            ps.text('Password is required');
+           }
+      else if (password.val()!=cpassword.val()) {
+               cs.text('Confirm password doesnt match');
+               ps.text('');
+           } 
+           else {
+               ps.text('');
+               cs.text('');
+           }
+   }
+   
+
+   function cpass()
+   {
+       if(cpassword.val()=='')
+       { 
+           cs.text('Confirm Password is required');
+       } 
+       else if(password.val()!=cpassword.val()) 
+           {
+               cs.text('Confirm password doesnt match');
+           } 
+           else {
+               cs.text('');
+               ps.text('');
+           }
+       }
 
 }
