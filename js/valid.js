@@ -199,5 +199,19 @@ function Index()
            es.text('');
        }
    }
+   function mobi()
+   {
+       if(mobile.val()==''){ 
+           ms.text('Mobile is required');
+       } 
+       else {
+           mobile.val(mobile.val().replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1'));
+           ms.text('');
+           if(mobile.val().length<10){
+               ms.text('Invalid Mobile number');
+           }
+       }
+   }
+
 
 }
