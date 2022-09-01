@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/valid.css">
+    <title>Validation</title>
+</head>
+
+<body>
+    <div id="registerModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="margin-top:5%;">
+            <!-- <span onclick="obj.col1();" class="closeRegister close">&times;</span> -->
+            <form action="" method="post" name="myForm">
+                <div class="form-wrap">
+                    <h1 style="text-align:center;">Register Here</h1>
+
+                    <p></p>
+                    <hr>
+
+                    <div class="from-group" style="text-align: center;">
+                        <label for="first-name">First Name <small class="dan">:</small></label>
+                        <input oninput="index.first();" size="12" placeholder="First Name" type="text" name="first_name"
+                            id="firstname" value=""><br>
+                        <span id="fs" class="dan  man"></span>
+                    </div>
+                    <div class="from-group"  style="text-align: center;">
+                        <label for="last-name">Last  Name <small class="dan">:</small></label>
+                        <input oninput="index.last();" size="12" placeholder="Last Name" type="text" name="last_name"
+                            id="lastname" value="">
+                        <span id="ls" class="dan man"></span>
+                    </div>
+
+                
+
+
+                    <button onclick="index.validateForm();" type="button" class="btn" name="submit" style="text-align:right;"
+                        id="submitForm">Register</button>
+
+                    <p class="bottom-text">
+
+                        Click here to indicate that you have read and agree to the
+                        <a href="#">Terms & Conditions</a> and
+                        <a href="#">Privacy Policy</a>
+                    </p>
+
+                </div>
+                <script src="Js/validJQuery.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js"></script>
+                <script src="Js/valid.js"></script>
+</body>
+
+</html>
